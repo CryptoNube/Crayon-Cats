@@ -4,17 +4,18 @@
     padding-top: 50px;
     padding-left: 65px;
     padding-bottom: 100px;
+    z-index: -5;
 }
 
 .cattributes {
     padding: 25px;
     background-color: #ededed;
     border-radius: 10px;
-
 }
 
-.dnaDiv {
+.dnaBox {
     position: absolute;
-    left:20px;
+    left:22%;
     bottom: 5px;
+
 }

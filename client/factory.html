@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academy kitties </title>
+  <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <script src="assets/bootstrap/js/popper.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
+  <script src="./abi.js"></script>
+
+
+
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/mystyle.css">
+  <link rel="stylesheet" href="assets/css/cats1.css">
+  <link rel="stylesheet" href="assets/css/colors.css">
+  <link rel="stylesheet" href="assets/css/factory2.css">
+  <link rel="stylesheet" href="assets/css/frontend.css">
+</head>
+  <body cz-shortcut-listen="true">
+
+    <!-- Start menu -->
+    <div id="menu"></div>
+    <br><br><br><br><br>
+    <!-- End menu -->
+    <div class="container p-5" style="margin-bottom: 10vh;">
+        <div align="center">
+            <h1 class="c-white">Kitties-Factory</h1>
+            <p class="c-white">Create your custom Kitty</p>
+        </div>
+        <ConnectButton/></ConnectButton>
+        <div class="row">
+            <div class="col-lg-4 catBox m-2 light-b-shadow">
+                <div class="cat">
+                    <div class="ears">
+                        <div id="left_ear" class="ear left_ear">
+                            <div class="inner_ear left_inner_ear"></div>
+                        </div>
+                        <div class="ear right_ear">
+                            <div class="inner_ear right_inner_ear"></div>
+                        </div>
+                    </div>
+                    <div class="head">
+                        <div class="eyes">
+                            <div class="eye left_eye">
+                                <div class="irus">
+                                    <span class="pupils"></span>
+                                </div>
+                             
+                                <div class="reflection_1"></div>
+                                <div class="reflection_2"></div>
+                            </div>
+                            <div class="eye right_eye">
+                                <div class="irus">
+                                    <span class="pupils"></span>
+                                </div>
+                       
+                                <div class="reflection_1"></div>
+                                <div class="reflection_2"></div>
+                            </div>
+                        </div>
+                        <span3 class="snout"></span3>
+                        <div class="nose"></div>
+                        <div class="mouth-left"></div>
+                        <div class="mouth-right"></div>
+                        <span2 class="forehead_markings_middle"></span2>
+                        <span2 class="forehead_markings_left"></span2>
+                        <span2 class="forehead_markings_right"></span2>
+                        <div id="whisker_mid_left" class="whisker whisker_mid_left"></div>
+                        <div id="whisker_top_left" class="whisker whisker_top_left"></div>
+                        <div id="whisker_bottom_left" class="whisker whisker_bottom_left"></div>
+                        <div id="whisker_mid_right" class="whisker whisker_mid_right"></div>                       
+                        <div id="whisker_top_right" class="whisker whisker_top_right"></div>
+                        <div id="whisker_bottom_right" class="whisker whisker_bottom_right"></div>               
+                    </div>
+                    <div class="torso">
+                        <div class="chest"></div>
+                        <div class="stomach"></div>
+                        <div class="paw_front_left">
+                            <span2 class="paw_stripe"></span2>
+                            <span2 class="paw_stripe bottom_stripe"></span2>
+                        </div>
+                        <div class="paw_front_right">
+                            <span2 class="paw_stripe"></span2>
+                            <span2 class="paw_stripe bottom_stripe"></span2>
+                        </div>
+                        <div class="paw_back_right"></div>
+                        <div class="paw_back_left"></div>
+                        <div id="tail" class="tail">
+                            <span2 class="tail_marking"></span2>
+                            <span2 class="tail_marking bottom_marking"></span2>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="dnaDiv" id="catDNA">
+                    <b>
+                        DNA:
+                        <!-- Colors -->
+                         <span id="dnabody"></span>
+                         <span id="dnapaw"></span>
+                         <span id="dnamarking"></span>
+                         <span id="dnasnout"></span>
+                         <span id="dnaeye"></span>
+                        
+                         <!-- Cattributes -->
+                         <span id="dnashape"></span>
+                         <span id="dnadecoration"></span>
+                         <span id="dnasnouttype"></span>
+                         <span id="dnasnoutOnly"></span>
+                         <span id="dnastomachOnly"></span>
+                         <span id="dnainnerEarOnly"></span>
+                         <span id="dnamarkingsOnly"></span>
+                         <span id="dnaanimation"></span>
+                         <span id="dnaspecial"></span>
+                    </b>
+                </div>
+            </div>
+            
+    <div class="col-lg-7 cattributes m-2 light-b-shadow">
+        <!-- Cat colors -->
+        <div id="catColors">
+            <div class="btn btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary active colors">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Color Combos
+                </label>
+                <label class="btn btn-primary colors2">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Details
+                </label>
+              </div>
+            <p></p>
+
+            <div class="tab colors">
+                <div class="form-group">
+                    <label for="formControlRange"><b>Head | Body</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
+                    <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange"><b>Ears | Paws | Tail</b><span class="badge badge-dark ml-2" id="pawcode"></span></label>
+                    <input type="range" min="10" max="98" class="form-control-range" id="pawcolor">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange"><b>Markings | Inner Ear</b><span class="badge badge-dark ml-2" id="markingcode"></span></label>
+                    <input type="range" min="10" max="98" class="form-control-range" id="markingcolor">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange"><b>Snout | Stomach</b><span class="badge badge-dark ml-2" id="snoutcode"></span></label>
+                    <input type="range" min="10" max="98" class="form-control-range" id="snoutcolor">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange"><b>Eyes</b><span class="badge badge-dark ml-2" id="eyecode"></span></label>
+                    <input type="range" min="10" max="98" class="form-control-range" id="eyecolor">
+                </div>
+            </div>
+
+            <div class="tab colors2">
+                <p></p>
+                <b>Styles | Animations</b>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <label for="formControlRange"><b style="color:rgb(114, 95, 41)">Pupil</b><span class="badge badge-dark ml-2" id="eyename"></span></label>
+                        <input type="range" min="1" max="3" class="form-control-range" id="eyeshape">
+                    </div>
+                    <div class="col">
+                        <label for="formControlRange"><b style="color:rgb(114, 95, 41)">Markings</b><span class="badge badge-dark ml-2" id="markingsName"></span></label>
+                        <input type="range" min="1" max="3" class="form-control-range" id="markingsOnOff">
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <label for="formControlRange"><b style="color:rgb(114, 95, 41)">Snout</b><span class="badge badge-dark ml-2" id="snoutName"></span></label>
+                        <input type="range" min="1" max="4" class="form-control-range" id="snoutType">
+                    </div>
+                    <div class="col">
+                    <label for="formControlRange"><b style="color:rgb(114, 95, 41)">Animation</b><span class="badge badge-dark ml-2" id="animationName"></span></label>
+                    <input type="range" min="1" max="4" class="form-control-range" id="animationType">
+                    </div> 
+                </div>
+                <p></p>
+
+                <div class="font-weight-bold">Seperate Colors</div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <label for="formControlRange"><b style="color:rgb(114, 95, 41)">Snout Color</b><span class="badge badge-dark ml-2" id="snoutOnlycode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="snoutOnlycolor">
+                    </div>
+                    <div class="col">
+                        <label for="formControlRange"><b style="color:rgb(114, 95, 41)">Stomach Color</b><span class="badge badge-dark ml-2" id="stomachOnlycode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="stomachOnlycolor">
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <label for="formControlRange"><b style="color:rgb(114, 95, 41)">Inner Ear Color</b><span class="badge badge-dark ml-2" id="innerEarOnlycode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="innerEarOnlycolor">
+                    </div>
+                    <div class="col">
+                        <label for="formControlRange"><b style="color:rgb(114, 95, 41)">Marking Color</b><span class="badge badge-dark ml-2" id="markingsOnlycode"></span></label>
+                        <input type="range" min="10" max="98" class="form-control-range" id="markingsOnlycolor">
+                    </div>
+                </div>
+        </div>
+        </div>
+        </div>
+        </div>
+            <div style="padding-left: 60px; padding-top: 5px">
+                <button type="button" class="btn btn-primary light-b-shadow random" style="margin-right: 13vh"> Generate Random Cat</button>
+                <button type="button" class="btn btn-primary light-b-shadow tabby">Tabby</button>
+                <button type="button" class="btn btn-primary light-b-shadow burmese">Burmese</button>
+                <button type="button" class="btn btn-primary light-b-shadow tuxedo">Tuxedo</button>
+                <button type="button" class="btn btn-primary light-b-shadow british">British Shorthair</button>
+                <button 
+                    type="button" 
+                    class="btn btn-success light-b-shadow" 
+                    style="float: right; margin-right: 75px"
+                    onClick="createKitty()"
+                >Create Kitty
+                </button>
+            </div>
+            <p></p>
+            <div class="alert alert-success" role="alert" id="kittyCreation" style="display:none"></div>
+
+
+
+        
+    </div>
+    <footer align="left">
+        <p>Ivan on Tech Academy Bootcamp July 2020</p>
+    </footer>
+
+  </body>
+  <script src="./index.js"></script>
+  <script src="assets/js/colors2.js"></script>
+  <script src="assets/js/catSettings.js"></script>
+  <script src="assets/js/catFactory.js"></script>
+  <script src="assets/js/components.js"></script>
+
+
+</html>
