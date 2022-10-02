@@ -9,16 +9,6 @@ function headColor(code, id) {
     $('#head' + id + ', #chest' + id).css('background', '#' + color)
 }
 
-function snoutColor(code, id) {
-    var color = colors[code]
-    $('#snout' + id + ', #stomach' + id).css('background', '#' + color)
-}
-
-function eyeColor(code, id) {
-    var color = colors[code]
-    $('#irus' + id).css('background', '#' + color)
-}
-
 function pawColor(code, id) {
     var color = colors[code]
     $('#ear' + id + ', #paw_front_left' + id + ', #paw_front_right' + id + ', #paw_back_left' + id + ', #paw_back_right' + id + ', #tail' + id + ', #ear' + id).css('background', '#' + color)
@@ -30,13 +20,24 @@ function markingColor(code, id) {
     $('#forehead_markings_middle' + id + ', #forehead_markings_left' + id + ', #forehead_markings_right' + id + ', #paw_stripe' + id + ', #bottom_stripe' + id + ', #tail_marking' + id + ', #inner_ear' + id).css('background', '#' + color)
 }
 
+function snoutColor(code, id) {
+    var color = colors[code]
+    $('#snout' + id + ', #stomach' + id).css('background', '#' + color)
+}
+
+function eyeColor(code, id) {
+    var color = colors[code]
+    $('#irus' + id + ', #irus_R' + id).css('background', '#' + color)
+}
+
+
 //Individual colors
 function snoutOnlyColor(code, id) {
     var color = colors[code]
     $('#snout' + id).css('background', '#' + color)
 }
 
-function stomachOnlyColor(code,id) {
+function stomachOnlyColor(code, id) {
     var color = colors[code]
     $('#stomach' + id).css('background', '#' + color)
 }
@@ -79,7 +80,7 @@ function eyeVariation(num, id) {
 
 //3 decorations types
 function decorationVariation(num, id) {
-
+    
     switch (num) {
         case "1":
             $('#markingsName' + id).html('Tabby')
@@ -98,10 +99,11 @@ function decorationVariation(num, id) {
 
 //4 Snout types
 function snoutVariation(num, id) {
+
     switch (num) {
         case "1":
             $('#snoutName' + id).html('Normal')
-            normalSnout()
+            normalSnout(id)
             break
         case "2":
             $('#snoutName' + id).html('Burmese')
@@ -144,62 +146,68 @@ function animationVariation(num, id) {
 // **   Eyes **  //
 
 function normalEyes(id) {
-    $('#eyes' + id).find('span').css('background', 'transparent')
+    $('#irus' + id).find('span').css('background', 'transparent')
+    $('#irus_R' + id).find('span').css('background', 'transparent')
 }
 
 function eyesType1(id) {
-    $('#eyes' + id).find('span').css({'background': '#18331d', 'width': '7px', 'left': '13px'})
+    $('#irus' + id).find('span').css({'background': '#18331d', 'width': '7px', 'left': '13px'})
+    $('#irus_R' + id).find('span').css({'background': '#18331d', 'width': '7px', 'left': '13px'})
 }
 
 function eyesType2(id) {
-    $('#eyes' + id).find('span').css({'background': '#18331d', 'width': '15px', 'left': '9px'})
+    $('#irus' + id).find('span').css({'background': '#18331d', 'width': '15px', 'left': '9px'})
+    $('#irus_R' + id).find('span').css({'background': '#18331d', 'width': '15px', 'left': '9px'})
 }
 
 
 // **   Decoration **  //
 function normaldecoration(id) {
-    $('#cat' + id).find('span2').css('background', '#d7c3a3')
+    $('#forehead_markings_middle' + id).css('background', '#d7c3a3')
+    $('#forehead_markings_left' + id).css('background', '#d7c3a3')
+    $('#forehead_markings_right' + id).css('background', '#d7c3a3')
+    $('#paw_front_right' + id).find('span2').css('background', '#d7c3a3')
+    $('#paw_front_left' + id).find('span2').css('background', '#d7c3a3')
+
 }
 
 function nodecoration(id) {
-    $('#cat' + id).find('span2').css('background', 'transparent')
+    $('#forehead_markings_middle' + id).css('background', 'transparent')
+    $('#forehead_markings_left' + id).css('background', 'transparent')
+    $('#forehead_markings_right' + id).css('background', 'transparent')
+    $('#paw_front_right' + id).find('span2').css('background', 'transparent')
+    $('#paw_front_left' + id).find('span2').css('background', 'transparent')
+    $('#tail' + id).find('span').css('background', 'transparent')
+
 }
 
 //Snout Variations
 function normalSnout(id) {
-    $('#cat' + id).find('span3').css({
-        'background': '#fff3e0',
+    $('#snout' + id).css({
         'width': '132px', 
         'height': '64px', 
         'margin-top': '61px',
         'margin-left': '40px',
-        'border-bottom': '0px solid transparent', 
-        'border-left': '0px solid transparent', 
-        'border-right': '0px solid transparent',
         'border-radius': '55% 55% 60% 60%',
-})
+    })
 }
 
 function unicolorSnout(id) {
-    $('#cat' + id).find('span3').css({
-        'background': '#fff3e0',
+    $('#snout' + id).css({
         'width': '51px', 
         'height': '44px', 
         'margin-top': '63px',
         'margin-left': '81px',
-        'border-bottom': '0px solid transparent', 
-        'border-left': '0px solid transparent', 
-        'border-right': '0px solid transparent',
         'border-radius': '55% 55% 60% 60%',
 })
 }
 
 function burmeseSnout(id) {
-    $('#cat' + id).find('span3').css({'width': '171px', 'height': '132px', 'margin-top': '-9px','margin-left': '21px'})
+    $('#snout' + id).css({'width': '171px', 'height': '132px', 'margin-top': '-9px','margin-left': '21px'})
 }
 
 function tuxedoSnout(id) {
-    $('#cat' + id).find('span3').css({
+    $('#snout' + id).css({
         'background': 'transparent',
         'width': '0', 
         'height': '0', 
@@ -236,13 +244,13 @@ function noAnimation(id) {
     resetAnimation(id)
 }
 
-function earAnimation(id) {    
-    $('#left_ear' + id).addClass('movingEar_left')
+function earAnimation(id) {  
+    $('#ear' + id).addClass('movingEar_left')
 
 }
 
 //moving both ears
-function whiskersAnimation(id) {    
+function whiskersAnimation(id) { 
     $("#whisker_mid_left" + id).addClass('movingWhiskers_mid_left')
     $("#whisker_top_left" + id).addClass('movingWhiskers_top_left')
     $("#whisker_bottom_left" + id).addClass('movingWhiskers_bottom_left')
@@ -259,15 +267,15 @@ function tailAnimation(id) {
 
 // Attentive Cat Ears animation
 
-function attentiveCat(id) {    
+/*function attentiveCat(id) {    
     $('#leftEar' + id).addClass('attentionLeft')
     $('#rightEar' + id).addClass('attentionRight')
 
-}
+}*/
 
 
 // Eyes of the car followign the cursor
-const closer = 4;
+/*const closer = 4;
 const further = -4;
 
 document.addEventListener('mousemove', (e) => {
@@ -283,4 +291,4 @@ document.addEventListener('mousemove', (e) => {
     $('.pupil-left').css('transform', 'translate(' + moveX + 'px,' + moveY + 'px)')
     $('.pupil-right').css('transform', 'translate(' + moveX + 'px,' + moveY + 'px)')
 
-}, false);
+}, false);*/

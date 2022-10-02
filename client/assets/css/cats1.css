@@ -22,6 +22,7 @@ body {
     left: -65px;
     top: -43px;
     position: absolute;
+    z-index: 15;
 }
 
 .head {
@@ -32,6 +33,7 @@ body {
     border: 6px solid transparent;
     border-radius: 50%;
     position: relative;
+    z-index: 50;
 }
 .eyes{
     top: 30px;
@@ -165,6 +167,10 @@ body {
 }
 .mouth-right {
     left: 105px;
+}
+
+.markings {
+    display:block
 }
 .forehead_markings_middle{
     position: absolute;
@@ -343,6 +349,7 @@ body {
     top: -5px;
     left: 49px;
 }
+
 .bottom_marking{
     width: 7px;
     height: 26px;

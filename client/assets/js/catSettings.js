@@ -39,7 +39,7 @@ var burmeseDNA = {
 var tuxedoDNA = {
   "headcolor" : 60,
   "pawcolor" : 60,
-  "markingcolor" : 20,
+  "markingcolor" : 15,
   "snoutcolor" : 30,
   "eyecolor" : 70,
   //Cattributes
@@ -77,15 +77,18 @@ $( document ).ready(function() {
     $('#dnamarking').html(defaultDNA.markingcolor);
     $('#dnasnout').html(defaultDNA.snoutcolor);
     $('#dnaeye').html(defaultDNA.eyecolor);
+    //Cattributes
     $('#dnashape').html(defaultDNA.eyesShape)
     $('#dnadecoration').html(defaultDNA.decorationPattern)
     $('#dnasnouttype').html(defaultDNA.snoutStyle)
+    $('#dnaanimation').html(defaultDNA.animation)
+    //Seperate Colors
     $('#dnasnoutOnly').html(defaultDNA.snoutOnlycolor)
     $('#dnastomachOnly').html(defaultDNA.stomachOnlycolor)
     $('#dnainnerEarOnly').html(defaultDNA.innerEarOnlycolor)
     $('#dnamarkingsOnly').html(defaultDNA.markingsOnlycolor)
-    $('#dnaanimation').html(defaultDNA.animation)
-    $('#dnaspecial').html(defaultDNA.lastNum)
+
+    //$('#dnaspecial').html(defaultDNA.lastNum)
 
     renderCat(defaultDNA)
 });
@@ -94,17 +97,20 @@ function getDna(){
     var dna = ''
     dna += $('#dnabody').html()
     dna += $('#dnapaw').html()
-    //dna += $('#dnamarking').html() 
-    //dna += $('#dnasnout').html()
+    dna += $('#dnamarking').html()
+    dna += $('#dnasnout').html()
     dna += $('#dnaeye').html()
+    //Cattributes
     dna += $('#dnashape').html()
     dna += $('#dnadecoration').html()
     dna += $('#dnasnouttype').html()
+    dna += $('#dnaanimation').html()
+    //Seperate Colors
     dna += $('#dnasnoutOnly').html()
     dna += $('#dnastomachOnly').html()
     dna += $('#dnainnerEarOnly').html()
     dna += $('#dnamarkingsOnly').html()
-    dna += $('#dnaanimation').html()
+
     //dna += $('#dnaspecial').html()
 
     return dna
@@ -265,6 +271,7 @@ $(".btn.british").click(() => {
   renderCat(britishDNA)
   $('.cat').find('span2').css('background', 'transparent')
 })
+
 $(".btn.random").click(() => {
   var randomDNA = {
     "headcolor" : Math.floor(Math.random() * 89) + 10,
@@ -283,22 +290,6 @@ $(".btn.random").click(() => {
     "animation" : Math.floor(Math.random() * 4) + 1,
   //    "lastNum" :  1
     }
-
-    $('#dnabody').html(defaultDNA.headcolor);
-    $('#dnapaw').html(defaultDNA.pawcolor);
-    $('#dnamarking').html(defaultDNA.markingcolor);
-    $('#dnasnout').html(defaultDNA.snoutcolor);
-    $('#dnaeye').html(defaultDNA.eyecolor);
-    $('#dnashape').html(defaultDNA.eyesShape)
-    $('#dnadecoration').html(defaultDNA.decorationPattern)
-    $('#dnasnouttype').html(defaultDNA.snoutStyle)
-    $('#dnasnoutOnly').html(defaultDNA.snoutOnlycolor)
-    $('#dnastomachOnly').html(defaultDNA.stomachOnlycolor)
-    $('#dnainnerEarOnly').html(defaultDNA.innerEarOnlycolor)
-    $('#dnamarkingsOnly').html(defaultDNA.markingsOnlycolor)
-    $('#dnaanimation').html(defaultDNA.animation)
-    $('#dnaspecial').html(defaultDNA.lastNum)
-
     renderCat(randomDNA)
 })
 

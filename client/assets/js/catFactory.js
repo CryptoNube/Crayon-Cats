@@ -174,6 +174,7 @@ function nodecoration() {
     $('.cat').find('span2').css('background', 'transparent')
 }
 
+
 function normalSnout() {
     $('.cat').find('span3').css({
         'background': '#fff3e0',
@@ -186,6 +187,8 @@ function normalSnout() {
         'border-right': '0px solid transparent',
         'border-radius': '55% 55% 60% 60%',
 })
+
+
 }
 function unicolorSnout() {
     $('.cat').find('span3').css({
@@ -204,6 +207,7 @@ function burmeseSnout() {
     $('.cat').find('span3').css({'width': '171px', 'height': '132px', 'margin-top': '-9px','margin-left': '21px'})
 }
 function tuxedoSnout() {
+
     $('.cat').find('span3').css({
         'background': 'transparent',
         'width': '0', 
@@ -215,6 +219,7 @@ function tuxedoSnout() {
         'border-right': '100px solid transparent',
         'border-radius': '50% 50% 50% 50%',
     })
+
 }
 
 function noAnimation() {
@@ -252,10 +257,4 @@ function resetAnimation() {
     $("#whisker_bottom_right").removeClass('movingWhiskers_bottom_right')
 }
 
-/*async function normaldecoration() {
-    //Remove all style from other decorations
-    //In this way we can also use normalDecoration() to reset the decoration style
-    $('.cat__head-dots').css({ "transform": "rotate(0deg)", "height": "48px", "width": "14px", "top": "1px", "border-radius": "0 0 50% 50%" })
-    $('.cat__head-dots_first').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "50% 0 50% 50%" })
-    $('.cat__head-dots_second').css({ "transform": "rotate(0deg)", "height": "35px", "width": "14px", "top": "1px", "border-radius": "0 50% 50% 50%" })
-}*/
+
