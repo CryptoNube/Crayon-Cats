@@ -17,7 +17,7 @@ function pawColor(code, id) {
 
 function markingColor(code, id) {
     var color = colors[code]
-    $('#forehead_markings_middle' + id + ', #forehead_markings_left' + id + ', #forehead_markings_right' + id + ', #paw_stripe' + id + ', #bottom_stripe' + id + ', #tail_marking' + id + ', #inner_ear' + id).css('background', '#' + color)
+    $('#forehead_markings_middle' + id + ', #forehead_markings_left' + id + ', #forehead_markings_right' + id + ', #paw_stripe' + id + ', #bottom_stripe' + id + ', #tail_marking' + id + ', #inner_ear' + id + ', #inner_ear_R' + id).css('background', '#' + color)
 }
 
 function snoutColor(code, id) {
@@ -44,7 +44,7 @@ function stomachOnlyColor(code, id) {
 
 function innerEarOnlyColor(code, id) {
     var color = colors[code]
-    $('#inner_ear' + id).css('background', '#' + color)
+    $('#inner_ear' + id + ', #inner_ear_R' + id).css('background', '#' + color)
 }
 
 function markingsOnlyColor(code, id) {
@@ -129,7 +129,7 @@ function animationVariation(num, id) {
             noAnimation(id)
             break
         case "2":
-            $('#animationName' + id).html('ear')
+            $('#animationName' + id).html('Ear')
             earAnimation(id)
             break
         case "3":
@@ -163,27 +163,28 @@ function eyesType2(id) {
 
 // **   Decoration **  //
 function normaldecoration(id) {
-    $('#forehead_markings_middle' + id).css('background', '#d7c3a3')
-    $('#forehead_markings_left' + id).css('background', '#d7c3a3')
-    $('#forehead_markings_right' + id).css('background', '#d7c3a3')
-    $('#paw_front_right' + id).find('span2').css('background', '#d7c3a3')
-    $('#paw_front_left' + id).find('span2').css('background', '#d7c3a3')
+    $('#forehead_markings_middle' + id).css('display', 'block')
+    $('#forehead_markings_left' + id).css('display', 'block')
+    $('#forehead_markings_right' + id).css('display', 'block')
+    $('#paw_front_right' + id).find('span2').css('display', 'block')
+    $('#paw_front_left' + id).find('span2').css('display', 'block')
 
 }
 
 function nodecoration(id) {
-    $('#forehead_markings_middle' + id).css('background', 'transparent')
-    $('#forehead_markings_left' + id).css('background', 'transparent')
-    $('#forehead_markings_right' + id).css('background', 'transparent')
-    $('#paw_front_right' + id).find('span2').css('background', 'transparent')
-    $('#paw_front_left' + id).find('span2').css('background', 'transparent')
-    $('#tail' + id).find('span').css('background', 'transparent')
+    $('#forehead_markings_middle' + id).css('display', 'none')
+    $('#forehead_markings_left' + id).css('display', 'none')
+    $('#forehead_markings_right' + id).css('display', 'none')
+    $('#paw_front_right' + id).find('span2').css('display', 'none')
+    $('#paw_front_left' + id).find('span2').css('display', 'none')
+    $('#tail' + id).find('span').css('display', 'none')
 
 }
 
 //Snout Variations
 function normalSnout(id) {
     $('#snout' + id).css({
+        'background': '#fff3e0',
         'width': '132px', 
         'height': '64px', 
         'margin-top': '61px',
@@ -194,6 +195,7 @@ function normalSnout(id) {
 
 function unicolorSnout(id) {
     $('#snout' + id).css({
+        'background': '#fff3e0',
         'width': '51px', 
         'height': '44px', 
         'margin-top': '63px',
@@ -207,17 +209,19 @@ function burmeseSnout(id) {
 }
 
 function tuxedoSnout(id) {
-    $('#snout' + id).css({
-        'background': 'transparent',
-        'width': '0', 
-        'height': '0', 
-        'margin-top': '10px',
-        'margin-left': '7px',
-        'border-bottom': '120px solid #fff3e0', 
-        'border-left': '100px solid transparent', 
-        'border-right': '100px solid transparent',
-        'border-radius': '50% 50% 50% 50%',
-    })
+    $('#tuxedo_snout_catalog' + id).css('display', 'block')
+    $('#snout' + id).css('display', 'none')
+    // $('#snout' + id).css({
+    //     'background': 'transparent',
+    //     'width': '0', 
+    //     'height': '0', 
+    //     'margin-top': '10px',
+    //     'margin-left': '7px',
+    //     'border-bottom': '120px solid #fff3e0', 
+    //     'border-left': '100px solid transparent', 
+    //     'border-right': '100px solid transparent',
+    //     'border-radius': '50% 50% 50% 50%',
+    // })
 }
 /** Animations **/
 

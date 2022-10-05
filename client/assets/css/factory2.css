@@ -1,5 +1,7 @@
 .catBox {
-    background-color: #e2efff;
+    background-color: #fff4ee;
+    width: 358px;
+    height: 438;
     border-radius: 10px;
     padding-top: 50px;
     padding-left: 65px;
@@ -9,7 +11,7 @@
 
 .cattributes {
     padding: 25px;
-    background-color: #ededed;
+    background-color: #fff4ee;
     border-radius: 10px;
 }
 

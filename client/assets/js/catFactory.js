@@ -168,14 +168,16 @@ function eyesType2() {
 }
 
 function normaldecoration() {
-    $('.cat').find('span2').css('background', '#d7c3a3')
+    $('.cat').find('span2').css('display', 'block')
 }
 function nodecoration() {
-    $('.cat').find('span2').css('background', 'transparent')
+    $('.cat').find('span2').css('display', 'none')
 }
 
 
 function normalSnout() {
+    $('.tuxedo_snout').css('display', 'none')
+    $('.snout').css('display', 'block')
     $('.cat').find('span3').css({
         'background': '#fff3e0',
         'width': '132px', 
@@ -191,6 +193,8 @@ function normalSnout() {
 
 }
 function unicolorSnout() {
+    $('.tuxedo_snout').css('display', 'none')
+    $('.snout').css('display', 'display')
     $('.cat').find('span3').css({
         'background': '#fff3e0',
         'width': '51px', 
@@ -204,21 +208,25 @@ function unicolorSnout() {
 })
 }
 function burmeseSnout() {
+    $('.tuxedo_snout').css('display', 'none')
+    $('.snout').css('display', 'display')
     $('.cat').find('span3').css({'width': '171px', 'height': '132px', 'margin-top': '-9px','margin-left': '21px'})
 }
 function tuxedoSnout() {
+    $('.tuxedo_snout').css('display', 'block')
+    $('.snout').css('display', 'none')
+    // $('.cat').find('span3').css({
+    //     'background': 'transparent',
+    //     'width': '0', 
+    //     'height': '0', 
+    //     'margin-top': '10px',
+    //     'margin-left': '7px',
+    //     'border-bottom': '120px solid #fff3e0', 
+    //     'border-left': '100px solid transparent', 
+    //     'border-right': '100px solid transparent',
+    //     'border-radius': '50% 50% 50% 50%',
+    // })
 
-    $('.cat').find('span3').css({
-        'background': 'transparent',
-        'width': '0', 
-        'height': '0', 
-        'margin-top': '10px',
-        'margin-left': '7px',
-        'border-bottom': '120px solid #fff3e0', 
-        'border-left': '100px solid transparent', 
-        'border-right': '100px solid transparent',
-        'border-radius': '50% 50% 50% 50%',
-    })
 
 }
 

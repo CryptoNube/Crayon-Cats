@@ -21,19 +21,19 @@
 }
 
 .movingEar_left {
-    animation: moveEar_left 4s infinite;
+    animation: moveEar_left 3s infinite;
 }
 @keyframes moveEar_left {
     0% {
         transform: rotate(0deg);
     }
-    2%{
+    4%{
         transform: rotate(0deg); 
     }
-    3% {
+    6% {
         transform: rotate(-30deg)
     }
-    4% {
+    8% {
         transform: rotate(0deg)
     }
     60% {

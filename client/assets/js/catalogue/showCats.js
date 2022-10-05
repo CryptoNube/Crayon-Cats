@@ -20,11 +20,9 @@ function appendCat(dna, id) {
     //3 Render the cats CSS style depending on DNA string
     renderCat(KittyDna, id)
     $('#catDNA' + id).html(`
-    <span class="badge badge-light"><h4 class="tsp-2 m-0"><b>GEN:</b> 0</h4></span>
+    <span class="badge "><h4 class="tsp-2 m-0"><b>GEN:</b> 0</h4></span>
     <br>
-    <span class="badge badge-light"><h4 class="tsp-2 m-0"><b>DNA:</b> `+ dna +`</h4></span>
-    
-    
+    <span class="badge "><h4 class="tsp-2 m-0"><b>DNA:</b> `+ dna +`</h4></span>
     `)
 }
 
@@ -45,10 +43,10 @@ function renderCat(dna, id) {
     animationVariation(dna.animation, id)
 
     //indiviudal Colors
-    snoutOnlyColor(dna.snoutOnlycolor, id)
-    innerEarOnlyColor(dna.innerEarOnlycolor, id)
-    markingsOnlyColor(dna.markingsOnlycolor, id)
-    stomachOnlyColor(dna.stomachOnlycolor, id)
+    snoutOnlyColor(dna.snoutOnlyColor, id)
+    innerEarOnlyColor(dna.innerEarOnlyColor, id)
+    markingsOnlyColor(dna.markingsOnlyColor, id)
+    stomachOnlyColor(dna.stomachOnlyColor, id)
 
 
 }
@@ -97,7 +95,7 @@ function catBox(id) {
                                     <div id="inner_ear` + id +`" class="inner_ear left_inner_ear"></div>
                                 </div>
                                 <div id="ear`+ id + `" class="ear right_ear">
-                                    <div id="inner_ear`+ id +`" class="inner_ear right_inner_ear"></div>
+                                    <div id="inner_ear_R`+ id +`" class="inner_ear right_inner_ear"></div>
                                 </div>
                             </div>
                                 <div id="head`+ id +`" class="head">
@@ -121,7 +119,8 @@ function catBox(id) {
                                     </div>
         
                                     <div id="snout`+ id +`" class="snout"></div>
-
+                                    <div><img src="assets/images/Tuxedo.png" id="tuxedo_snout_catalog`+ id +`" class="tuxedo_snout_catalog"></div>
+                                    
                                     <div class="nose"></div>
                                     <div class="mouth-left"></div>
                                     <div class="mouth-right"></div>
@@ -157,12 +156,12 @@ function catBox(id) {
                                 </div>
 
                             </div>
-                                </div>
+                        </div>
                             <div class="dnaDiv" id="catDNA`+ id + `"></div>
                                 <ul class="ml-5 cattributes">
-                                <li><span id="eyename`+id+`"></span> eyes</li>
-                                <li><span id="markingsName`+id+`"></span> decoration</li>
-                                <li><span id="animationName`+id+`"></span></li>
+                                <li>Pupils: <span id="eyename`+id+`"></span></li>
+                                <li>Snout Style: <span id="snoutName`+id+`"></span></li>
+                                <li>Animation: <span id="animationName`+id+`"></span></li>
                                 </ul>
                             </div>`
 
