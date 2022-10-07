@@ -1,0 +1,47 @@
+    
+    /* primary button */
+    .btn-primary {
+        color: #fff;
+        background-color: #d9530a;
+        border-color: #d9530a;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active    {
+        color: #fff;
+        background-color: #f25c0b;
+        border-color: #f25c0b;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+    .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #ff5b03;
+        border-color: #ff5b03;
+        box-shadow: 0px 5px 7px 0px #797979;
+    }
+    
+    /* success button */
+    .btn-success {
+        color: #fff;
+        background-color: #d2a903;
+        border-color: #d2a903;
+    }
+    .btn-success:hover,
+    .btn-success:focus,
+    .btn-success:active    {
+        color: #fff;
+        background-color: #faca06;
+        border-color: #faca06;
+    }
+
+    .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
+        .show > .btn-success.dropdown-toggle {
+        color: #fff;
+        background-color: #eabe0f;
+        border-color: #eabe0f;
+    }
+
+
+
+    

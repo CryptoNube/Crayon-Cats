@@ -159,9 +159,9 @@ function catBox(id) {
                         </div>
                             <div class="dnaDiv" id="catDNA`+ id + `"></div>
                                 <ul class="ml-5 cattributes">
-                                <li>Pupils: <span id="eyename`+id+`"></span></li>
-                                <li>Snout Style: <span id="snoutName`+id+`"></span></li>
-                                <li>Animation: <span id="animationName`+id+`"></span></li>
+                                <li><h9 class="c-white">Pupils: <span id="eyename`+id+`"></span></h9></li>
+                                <li><h9 class="c-white">Snout Style: <span id="snoutName`+id+`"></span></h9></li>
+                                <li><h9 class="c-white">Animation: <span id="animationName`+id+`"></span></h9></li>
                                 </ul>
                             </div>`
 

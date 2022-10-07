@@ -8,7 +8,7 @@ function menu(){
 
     var menu = `<nav class="menu navbar navbar-expand-md navbar-light fixed-top bg-ligh p-4">
       <div class="container">
-          <a class="navbar-brand" href="index.html"><b>Academy-Kitties</b></a>
+          <a class="navbar-brand" href="index.html"><b class="c-white">Academy-Kitties</b></a>
           <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
               data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -21,13 +21,13 @@ function menu(){
                   <ul class="navbar-nav mr-auto">
   
                       <li class="nav-item">
-                          <a class="nav-link" href="index.html"><b>Home</b></a>
+                          <a class="nav-link" href="index.html"><p>Home</p></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="catalogue.html"><b>Catalogue</b></a>
+                          <a class="nav-link" href="catalogue.html"><p>Catalogue</p></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="factory.html"><b>K-Factory</b></a>
+                          <a class="nav-link" href="factory.html"><p>K-Factory</p></a>
                       </li>
   
                       <li class="nav-item">

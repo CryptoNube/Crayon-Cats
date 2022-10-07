@@ -10,9 +10,13 @@ body {
   letter-spacing: 1px; 
 }
 
+.text {
+  color: white;
+}
 
 .navbar-light {
-  background: #ffffff;
+  background: rgb(56 50 50);
+  overflow: hidden;
 }
 
 .fit-content {
@@ -32,6 +36,7 @@ html {
 }
 
 p {
+
   letter-spacing: 1px;
 }
 

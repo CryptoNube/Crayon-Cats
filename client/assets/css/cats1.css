@@ -7,13 +7,19 @@ html {
     box-sizing: border-box;
     overflow-y: scroll;
 }
-body {
-    background: #607d8b;
- 
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
 }
 
+
 .cat {
-    left: 68px;
+    left: 64px;
     top: 80px;
     position: absolute;
 }
