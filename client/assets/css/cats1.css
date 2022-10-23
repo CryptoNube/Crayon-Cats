@@ -17,11 +17,23 @@ html {
     z-index: -10;
 }
 
+.image-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
 
 .cat {
     left: 64px;
     top: 80px;
     position: absolute;
+}
+
+.single_cat_position {
+    display: flex;
+    margin-left: 150px;
+
 }
 
 .torso {
@@ -38,7 +50,7 @@ html {
     height: 175px;
     border: 6px solid transparent;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     z-index: 50;
 }
 .eyes{
@@ -143,7 +155,6 @@ html {
 }
 
 .snout{
-    background: #fff3e0;
     width: 132px;
     height: 64px;
     margin-top: 61px;
@@ -155,16 +166,19 @@ html {
 
 .tuxedo_snout {
     display: none;
-    margin-top: 15px;
-    width: 73%;
+    margin-top: 16px;
+    width: 155px;
     margin-left: 30px;
+    position: relative;
 }
 
 .tuxedo_snout_catalog {
     display: none;
-    margin-top: 16px;
-    width: 73%;
+    margin-top: 15px;
+    width: 155px;
     margin-left: 30px;
+    position: absolute;
+
 }
 
 .nose {

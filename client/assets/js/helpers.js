@@ -4,15 +4,24 @@ function open_window(url) {
     window.open(url, '_blank')
 }
 
-function alert_msg(content, type, final = false) {
+function go_to(url) {
+    window.location.href = url;
+}
+
+//Get the variables from the url. 
+function get_variables() {
+    var $_GET = [];
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (a, name, value) {
+      $_GET[name] = value;                
+    });
+    return $_GET;
+  }
+
+  function alert_msg(content, type) {
     var str = '';
-    str += '<div class="alert alert-' + type + ' pr-2 fit-content" role="alert">' + content + '<button type="button" class="close ml-2" data-dismiss="alert" aria-label="Close"> <i class="far fa-times-circle"></i> </button></div>';
-    if(final == true){
-    $('.activeBox').append(str)
-        return true
-    }
+    str += '<div class="alert alert-' + type + ' fit-content mt-3" role="alert">' + content + '<button type="button" class="close ml-2" data-dismiss="alert" aria-label="Close"> <i class="far fa-times-circle"></i> </button></div>';    
     $('#message').html(str)    
-    disable_alert()
+
 }
 
 function log(data){

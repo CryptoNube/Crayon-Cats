@@ -6,9 +6,9 @@ $( document ).ready(function() {
 
 function menu(){
 
-    var menu = `<nav class="menu navbar navbar-expand-md navbar-light fixed-top bg-ligh p-4">
+    var menu = `<nav class="menu navbar navbar-expand-md navbar-purple fixed-top bg-ligh p-4">
       <div class="container">
-          <a class="navbar-brand" href="index.html"><b class="c-white">Academy-Kitties</b></a>
+          <a class="navbar-brand" href="index.html"><b class="c-white">Rad-Kitties</b></a>
           <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
               data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -24,7 +24,13 @@ function menu(){
                           <a class="nav-link" href="index.html"><p>Home</p></a>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link" href="marketPlace.html"><p>Market Place</p></a>
+                      </li>
+                      <li class="nav-item">
                           <a class="nav-link" href="catalogue.html"><p>Catalogue</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="myCats.html"><p>My kitties</p></a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="factory.html"><p>K-Factory</p></a>

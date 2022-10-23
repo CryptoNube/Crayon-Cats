@@ -22,9 +22,9 @@
 </head>
   <body cz-shortcut-listen="true">
 
-        <video class="video-bg" autoplay muted>
-            <source src="assets/images/RadCatVid.mp4" type="video/mp4">
-        </video>
+    <div>
+        <img src="assets/images/kitty-background.png" class="image-bg"/>
+    </div>
 
 
     <!-- Start menu -->
@@ -36,7 +36,7 @@
             <h1 class="c-white">Kitties-Factory</h1>
             <p class="c-white">Create your custom Kitty</p>
         </div>
-        <ConnectButton/></ConnectButton>
+
         <div class="row">
             <div class="col-lg-4 catBox m-2 light-b-shadow">
                 <div class="cat">
@@ -143,7 +143,7 @@
             <div class="tab colors">
                 <div class="form-group">
                     <label for="formControlRange"><b>Head | Body</b><span class="badge badge-dark ml-2" id="headcode"></span></label>
-                    <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
+                    <input type="range" min="10"  max="98" class="form-control-range" id="bodycolor">
                 </div>
                 <div class="form-group">
                     <label for="formControlRange"><b>Ears | Paws | Tail</b><span class="badge badge-dark ml-2" id="pawcode"></span></label>
@@ -232,15 +232,17 @@
                 </button>
             </div>
             <p></p>
-            <div class="alert alert-success" role="alert" id="kittyCreation" style="display:none"></div>
+            <div id="message" align="center"></div>
     </div>
 
   </body>
   <script src="./index.js"></script>
   <script src="assets/js/colors2.js"></script>
+  <script src="assets/js/slider.js"></script>
   <script src="assets/js/catSettings.js"></script>
   <script src="assets/js/catFactory.js"></script>
   <script src="assets/js/components.js"></script>
+  <script src="assets/js/helpers.js"></script>
 
 
 </html>

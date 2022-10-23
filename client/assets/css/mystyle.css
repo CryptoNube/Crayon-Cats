@@ -18,6 +18,10 @@ body {
   background: rgb(56 50 50);
   overflow: hidden;
 }
+.navbar-purple {
+  background: #46015c;
+  overflow: hidden;
+}
 
 .fit-content {
   width: fit-content;
@@ -40,14 +44,6 @@ p {
   letter-spacing: 1px;
 }
 
-#message {
-  margin  : 10px;
-  position: fixed;
-  bottom  : 4rem;
-  z-index : 2000;
-  right   : 10px;
-}
-
 .pointer {
 
   cursor: pointer;
@@ -55,6 +51,10 @@ p {
 }
 
 /*  Alignment */
+
+.t-no-wrap {
+  white-space: nowrap;
+}
 
 .no-wrap {
   flex-wrap: nowrap;
@@ -174,7 +174,7 @@ th {
 
 /* BOXES */
 
-#results {
+.results {
 
   margin  : 10px;
   position: fixed;
@@ -183,6 +183,15 @@ th {
   right   : 10px;
 }
 
+.containerGradient {
+  background-image: linear-gradient(rgb(0,0,0,0.15), rgb(0,0,0,0));
+  height: 50%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9;
+}
 
 /* TOOLTIP */
 .tooltip-btn {
@@ -280,6 +289,7 @@ th {
 
 .tsp-2 {
   letter-spacing: 2px;
+  color: #d274d3;
 }
 
 /* SHADOW*/

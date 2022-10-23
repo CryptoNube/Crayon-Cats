@@ -60,6 +60,36 @@ contract KittyContract is IERC721, Ownable {
 
     uint256 public gen0Counter;
 
+    constructor() {
+        _createKitty(0, 0, 0, 1122334455667788990011, address(0));
+    }
+
+    function breed(uint256 _dadId, uint256 _mumId) public returns (uint256){
+        require(_owns(msg.sender, _dadId), "The user doesn't own the token");
+        require(_owns(msg.sender, _mumId), "The user doesn't own the token");
+
+        ( uint256 dadDna,,,,uint256 DadGeneration ) = getKitty(_dadId);
+
+        ( uint256 mumDna,,,,uint256 MumGeneration ) = getKitty(_mumId);
+        
+        uint256 newDna = _mixDna(dadDna, mumDna);
+
+        uint256 kidGen = 0;
+        if (DadGeneration < MumGeneration){
+            kidGen = MumGeneration + 1;
+            kidGen /= 2;
+        } else if (DadGeneration > MumGeneration){
+            kidGen = DadGeneration + 1;
+            kidGen /= 2;
+        } else{
+            kidGen = MumGeneration + 1;
+        }
+
+        _createKitty(_mumId, _dadId, kidGen, newDna, msg.sender);
+        return newDna;
+
+    }
+
     function supportsInterface(bytes4 _interfaceId) external pure returns (bool) {
         return (_interfaceId == _INTERFACE_ID_ERC721 || _interfaceId == _INTERFACE_ID_ERC165);
     }
@@ -249,13 +279,61 @@ contract KittyContract is IERC721, Ownable {
         return size > 0;
     }
 
-        function _isApprovedOrOwner(address _spender, address _from, address _to, uint256 _tokenId) internal view returns (bool) {
+    function _isApprovedOrOwner(address _spender, address _from, address _to, uint256 _tokenId) internal view returns (bool) {
         require(_tokenId < kitties.length); //Token must exist
         require(_to != address(0)); //TO address is not zero address
         require(_owns(_from, _tokenId)); //From owns the token
         
         //spender is from OR spender is approved for tokenId OR spender is operator for from
         return (_spender == _from || _approvedFor(_spender, _tokenId) || isApprovedForAll(_from, _spender));
+    }
+
+    function _mixDna( uint256 _mumDna, uint256 _dadDna) public view returns(uint256) {
+        uint256[11] memory geneArray;
+        uint16 random = uint16(block.timestamp % 65535);
+        
+        uint256 i = 1;
+        uint256 index = 10;
+
+        for(i = 1; i <=1024; i = i * 2){
+            if(random & i != 0){
+                geneArray[index] = uint16(_mumDna % 100);
+            } else{
+                geneArray[index] = uint16(_dadDna % 100);
+            }
+            _mumDna = _mumDna / 100;            
+            _dadDna = _dadDna / 100;
+
+            if(i != 1024){index = index -1;}
+        }
+
+        uint256 newGene;
+        for(i = 0; i < 11; i++){
+            newGene = newGene + geneArray[i];
+            if(i !=10){
+                newGene = newGene * 100;
+            }
+        }
+        return newGene;
+
+    //    1.  0000000000000001 = 1
+    //    2.  0000000000000010 = 2
+    //    3.  0000000000000100 = 4
+    //    4.  0000000000001000 = 8
+    //    5.  0000000000010000 = 16
+    //    6.  0000000000100000 = 32
+    //    7.  0000000001000000 = 64
+    //    8.  0000000010000000 = 128
+    //    9.  0000000000000001 = 256
+    //    10. 0000000000000001 = 512
+    //    11. 0000000000000001 = 1024
+    //    12. 0000000000000001 = 2048
+    //    13. 0000000000000001 = 4096
+    //    14. 0000000000000001 = 8192
+    //    15. 0000000000000001 = 16384
+    //    16. 0000000000000001 = 32768
+
+
     }
 
 }
