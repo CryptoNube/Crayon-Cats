@@ -4,8 +4,8 @@ var web3 = new Web3(Web3.givenProvider);
 var instance;
 var marketplaceInstance;
 var user;
-var contractAddress = "0x66d992f944AC655666A75Ca26aeEBCf46a00E086";
-var marketplaceAddress = "0x7Dd9f48130D8AAc90E98B973Fd6e190A45E0488F";
+var contractAddress = "0x475A88a62DadCab9e61490ce0e7cCC95569b1AA4";
+var marketplaceAddress = "0xAC592f4406dA66d478e974d6AD649838a7b6CC10";
 var contractOwner = "0x2CEc4A4c30FdCaA6b40aE147212a7e45803d8FE6";
 
 $(document).ready(function(){

@@ -150,11 +150,11 @@ contract KittyContract is IERC721, Ownable {
         require(_owns(_from, _tokenId));
         require(_tokenId < kitties.length);
         
-        _transfer(msg.sender, _to, _tokenId); //<=Old code
+        //_transfer(msg.sender, _to, _tokenId); //<=Old code
         
-        /*require(_isApprovedOrOwner(msg.sender, _from, _to, _tokenId));
+        require(_isApprovedOrOwner(msg.sender, _from, _to, _tokenId));
 
-        _transfer(_from, _to, _tokenId);*/ //Newer code
+        _transfer(_from, _to, _tokenId); //Newer code
     }
 
 
