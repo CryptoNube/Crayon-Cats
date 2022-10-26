@@ -4,14 +4,14 @@ var web3 = new Web3(Web3.givenProvider);
 var instance;
 var marketplaceInstance;
 var user;
-var contractAddress = "0x475A88a62DadCab9e61490ce0e7cCC95569b1AA4";
-var marketplaceAddress = "0xAC592f4406dA66d478e974d6AD649838a7b6CC10";
+var contractAddress = "0xBB39B46667D89A04D815948e45b3Ec25e67cCc6b";
+
 var contractOwner = "0x2CEc4A4c30FdCaA6b40aE147212a7e45803d8FE6";
 
 $(document).ready(function(){
     window.ethereum.enable().then(function(accounts){
-       instance = new web3.eth.Contract(abi.kittyContract, contractAddress, {from: accounts[0]});
-       marketplaceInstance = new web3.eth.Contract(abi.marketplace, marketplaceAddress, {from: accounts[0]});
+       instance = new web3.eth.Contract(abi, contractAddress, {from: accounts[0]});
+
       //  instance.methods.owner().call().then(test => {
       //   contractOwner = test;
       // });
@@ -37,7 +37,7 @@ instance.events.Birth().on('data', function(event) {
       + " genes:" + genes,'success')
 }).on('error', console.error);
 
-marketplaceInstance.events.MarketTransaction().on('data', (event) => {
+instance.events.MarketTransaction().on('data', (event) => {
       console.log(event);
       var eventType = event.returnValues["TxType"].toString()
       var tokenId = event.returnValues["tokenId"]
@@ -74,21 +74,9 @@ marketplaceInstance.events.MarketTransaction().on('data', (event) => {
 
 });
 
-async function initMarketplace() {
-  var isMarketplaceOperator = await instance.methods.isApprovedForAll(user, marketplaceAddress).call();
-  if(isMarketplaceOperator){
-    getInventory();
-  } else{
-    await instance.methods.setApprovalForAll(marketplaceAddress, true).send().on('receipt', function(receipt){
-      //tx done
-      console.log("tx done");
-      getInventory();
-    })
-  }
-}
 
 async function getInventory(){
-  var arrayId = await marketplaceInstance.methods.getAllTokenOnSale().call();
+  var arrayId = await instance.methods.getAllTokenOnSale().call();
   console.log(arrayId);
   for (i = 0; i < arrayId.length; i++) {
     if(arrayId[i] !=0){ 
@@ -156,7 +144,7 @@ async function sellCat(id) {
   var price = $('#catPrice').val()
   var amount = web3.utils.toWei(price, "ether")
   try {
-    await marketplaceInstance.methods.setOffer(amount,id).send();
+    await instance.methods.setOffer(amount,id).send();
   } catch (err) {
     console.log(err);
   }
@@ -165,7 +153,7 @@ async function sellCat(id) {
 async function buyKitten(id, price) {
   var amount = web3.utils.toWei(price, "ether")
   try {
-    await marketplaceInstance.methods.buyKitty(id).send({ value: amount });
+    await instance.methods.buyKitty(id).send({ value: amount });
   } catch (err) {
     console.log(err);
   }
@@ -177,7 +165,7 @@ async function checkOffer(id) {
   let res;
   try {
 
-    res = await marketplaceInstance.methods.getOffer(id).call();
+    res = await instance.methods.getOffer(id).call();
     var price = res['price'];
     var seller = res['seller'];
     var onsale = false
@@ -238,12 +226,12 @@ async function myKitties() {
 async function deleteOffer(id) {
   let res;
   try {
-    res = await marketplaceInstance.methods.removeOffer(id).send();
+    res = await instance.methods.removeOffer(id).send();
   } catch (err) {
     console.log(err);
   }
   for (i = 0; i < arrayId.length; i++){
-    kitty = await marketplaceInstance.methods.getKitty(arrayId[i]).call();
+    kitty = await instance.methods.getKitty(arrayId[i]).call();
     appendCat(kitty[0],i)
   }
 }
