@@ -4,7 +4,7 @@ var web3 = new Web3(Web3.givenProvider);
 var instance;
 var marketplaceInstance;
 var user;
-var contractAddress = "0xBB39B46667D89A04D815948e45b3Ec25e67cCc6b";
+var contractAddress = "0xF7e83A315adDC2C7cD18BA62168F80ce7856365d";
 
 var contractOwner = "0x2CEc4A4c30FdCaA6b40aE147212a7e45803d8FE6";
 
@@ -224,16 +224,12 @@ async function myKitties() {
 }
 
 async function deleteOffer(id) {
-  let res;
   try {
-    res = await instance.methods.removeOffer(id).send();
+    await instance.methods.removeOffer(id).send();    
   } catch (err) {
     console.log(err);
   }
-  for (i = 0; i < arrayId.length; i++){
-    kitty = await instance.methods.getKitty(arrayId[i]).call();
-    appendCat(kitty[0],i)
-  }
+
 }
 
 async function totalCats() {

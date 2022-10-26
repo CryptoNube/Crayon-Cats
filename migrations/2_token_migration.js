@@ -1,5 +1,5 @@
-const KittyContract = artifacts.require("KittyContract");
+const KittyExchange = artifacts.require("KittyExchange");
 
 module.exports = function (deployer) {
-  deployer.deploy(KittyContract);
+  deployer.deploy(KittyExchange);
 };
