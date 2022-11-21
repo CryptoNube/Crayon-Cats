@@ -28,9 +28,9 @@ function breedAppend(dna,id,gen,gender) {
     //3 Render the cats CSS style depending on DNA string
     renderCat(KittyDna,id)
     $('#catDNA'+id).html(`
-    <span class="badge badge-light"><h4 class="tsp-2 m-0"><b>GEN:</b>`+gen+`</h4></span>
+    <span class="badge badge-light_details"><h4 class="tsp-2 m-0"><b>GEN:</b>`+gen+`</h4></span>
     <br>
-    <span class="badge badge-light"><h4 class="tsp-2 m-0"><b>DNA:</b>`+ dna +`</h4></span>`)
+    <span class="badge badge-light_details"><h4 class="tsp-2 m-0"><b>DNA:</b>`+ dna +`</h4></span>`)
 
     $('#catview'+id).attr('onclick','selectBreed("'+dna+'","'+id+'","'+gen+'","'+gender+'")')    
 }

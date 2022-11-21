@@ -17,6 +17,11 @@
         color: #212529;
         background-color: #5d0088;
     }
+    
+    .badge-light_details {
+        color: #212529;
+
+    }
 
     .breed_card_alignment {
         margin-left: 15px;
