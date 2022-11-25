@@ -4,9 +4,31 @@ var web3 = new Web3(Web3.givenProvider);
 var instance;
 var marketplaceInstance;
 var user;
-var contractAddress = "0xF7e83A315adDC2C7cD18BA62168F80ce7856365d";
+var contractAddress = "0x50bbBee91B3875248838cEB0c41eD65F08757D3f";
 
 var contractOwner = "0x2CEc4A4c30FdCaA6b40aE147212a7e45803d8FE6";
+
+function start() {
+
+
+  window.ethereum.enable().then(function(accounts){
+
+     instance = new web3.eth.Contract(abi, contractAddress, {from: accounts[0]});
+
+    //  instance.methods.owner().call().then(test => {
+    //   contractOwner = test;
+    // });
+     user = accounts[0]; 
+
+
+
+  instance.events.MarketTransaction().on('data', (event) => {
+      console.log(event);
+  })
+  .on('error', console.error);
+  });
+
+}
 
 $(document).ready(function(){
     window.ethereum.enable().then(function(accounts){

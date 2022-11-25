@@ -8,7 +8,7 @@ function menu(){
 
     var menu = `<nav class="menu navbar navbar-expand-md navbar-purple fixed-top bg-ligh p-4">
       <div class="container">
-          <a class="navbar-brand" href="index.html"><b class="c-white">Crayon Cats</b></a>
+          <a class="navbar-brand" href="index.html"><b class="c-white">Crayon Kitties</b></a>
           <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
               data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -37,7 +37,7 @@ function menu(){
                       </li>
   
                       <li class="nav-item">
-                          <button class="btn red-btn ml-4">Start</button>
+                          <button class="btn red-btn ml-4" onclick="start()">Start</button>
                       </li>
   
                   </ul>

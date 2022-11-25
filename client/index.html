@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academy kitties </title>
+    <title>Crayon Kitties </title>
     <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <script src="assets/bootstrap/js/popper.js"></script>
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/colors.css">
     <link rel="stylesheet" href="assets/css/frontend.css">
     <link rel="stylesheet" href="assets/css/cats1.css">
+    <script src="./abi.js"></script>
 
 </head>
 
@@ -36,7 +37,7 @@
         <div class="container">
             <div class="banner">
                 <h3 class="c-white m-2">Collect and breed furrever friends!</h3>
-                <button class="btn white-btn mt-2 c-red">Get your own kitty</button>
+                <button class="btn white-btn mt-2 c-red" onclick="go_to('marketplace.html')">Get your own kitty</button>
             </div>
         </div>
 
@@ -45,7 +46,7 @@
             <div class="r1 row">
     
 
-                <div class="col-lg-4 pointer">
+                <div class="col-lg-4 pointer" onclick="go_to('marketplace.html')">
                     <div class="featureBox_home_page">
                         <div class="egg_homepage">
     
@@ -61,7 +62,7 @@
                     </div>
                 </div>
     
-                <div class="col-lg-4 pointer">
+                <div class="col-lg-4 pointer" onclick="go_to('breed.html')">
                     <div class="featureBox_home_page">
                         <div class="egg_homepage_2">
     
@@ -86,6 +87,7 @@
 </body>
 
 <script src="assets/js/components.js"></script>
+<script src="assets/js/helpers.js"></script>
 <script src="./index.js"></script>
 
 </html>
