@@ -23,6 +23,9 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+const mnemonic = require("./secret.json").secret;  
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -57,6 +60,16 @@ module.exports = {
     // },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
+
+    goerli: {
+      provider: () => {
+        return new HDWalletProvider(mnemonic, 'https://eth-goerli.g.alchemy.com/v2/GgXuhW8yyDNe0kONIxP7d0lxkEdhkWQn')
+      },
+      network_id: 5, // eslint-disable-line camelcase
+      gas: 4465030,
+      gasPrice: 10000000000,
+    },
+
     // ropsten: {
     // provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
     // network_id: 3,       // Ropsten's id
