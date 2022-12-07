@@ -3,5 +3,15 @@
     "@truffle/hdwallet-provider": "^2.1.2",
     "truffle-privatekey-provider": "^1.5.0",
     "web3uikit": "^0.1.140"
+  },
+  "homepage": "http://https://cryptonube.github.io/Crayon-Cats",
+
+  "scripts": {
+    "pre-deploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
