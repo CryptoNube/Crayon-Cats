@@ -5,7 +5,9 @@ Built as part of Moralis Academy's, "Build an NFT Marketplace" course.
 
 Try it live on the Goerli testnet https://cryptonube.github.io/crayon-cats.
 
-Press Start and connect your Metamask wallet through the Goerli Testnet then, head over to the Catalogue and check out the cats. 
+Press Start and connect your Metamask wallet through the Goerli Testnet. 
+
+Head over to the Catalogue and check out the cats. 
 
 Check out what is for sale in the "Marketplace". If you purchase a cat, it will show up in the "My Kitties" section. If you purchase 2 or more, you can breed them to "mint" yourself another cat.
 The "Breed" section is accessible in the "My Kitties" section or from the homepage under the "Breed Kitties" feature.
