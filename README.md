@@ -22,21 +22,21 @@ To check out how original (0 Generation) cats are made, go to the "Cat-Factory" 
 
 # Try out code
 
-Install dependancies
+## Install dependancies
 
 ~~~
 npm i
 ~~~
 
-Install Truffle.
+## Install Truffle.
 
 ~~~
 npm install  -g truffle
 ~~~
 
-Start your local Ganache.
+## Start your local Ganache.
 
-Deploy your contract to your local ganache node.
+## Deploy your contract to your local ganache node.
 
 ~~~
 truffle migrate
@@ -50,7 +50,7 @@ Replace the 'contractAddress' and the 'contractOwner' addresses, in the index.js
 
 Import the contractOwner address, into your metamask, by the private key provided by your local Ganache.
 
-Run in your local server
+## Run in your local server
 ~~~
 cd client
 ~~~
