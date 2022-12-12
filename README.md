@@ -4,7 +4,7 @@
 Built as part of Moralis Academy's, "Build an NFT Marketplace" course.
 ##
 
-## Try it live on the Goerli testnet https://cryptonube.github.io/crayon-cats.
+## Try it live on the Goerli testnet https://cryptonube.github.io/crayon-cats
 
 Press Start and connect your Metamask wallet through the Goerli Testnet
 
