@@ -2,8 +2,9 @@
 ## About
 
 Built as part of Moralis Academy's, "Build an NFT Marketplace" course.
+##
 
-Try it live on the Goerli testnet https://cryptonube.github.io/crayon-cats.
+## Try it live on the Goerli testnet https://cryptonube.github.io/crayon-cats.
 
 Press Start and connect your Metamask wallet through the Goerli Testnet. 
 
@@ -21,24 +22,24 @@ To check out how original (0 Generation) cats are made, go to the "Cat-Factory" 
 <img src="client\assets\images\Crayon-Cats-Homepage.png"/>
 <img src="client\assets\images\Crayon-Cats-1.png"/>
 <img src="client\assets\images\Breed.png"/>
+ 
+## To use the code in your local node
 
-# Try out code
-
-## Install dependancies
+### Install dependancies
 
 ~~~
 npm i
 ~~~
 
-## Install Truffle.
+### Install Truffle.
 
 ~~~
 npm install  -g truffle
 ~~~
 
-## Start your local Ganache.
+ Start your local Ganache.
 
-## Deploy your contract to your local ganache node.
+### Deploy your contract to your local ganache node.
 
 ~~~
 truffle migrate
@@ -52,7 +53,7 @@ Replace the 'contractAddress' and the 'contractOwner' addresses, in the index.js
 
 Import the contractOwner address, into your metamask, by the private key provided by your local Ganache.
 
-## Run in your local server
+### Run in your local server
 ~~~
 cd client
 ~~~
