@@ -37,7 +37,7 @@ npm i
 npm install  -g truffle
 ~~~
 
- Start your local Ganache.
+### Start your local Ganache.
 
 ### Deploy your contract to your local ganache node.
 
