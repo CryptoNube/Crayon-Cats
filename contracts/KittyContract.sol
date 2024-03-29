@@ -7,7 +7,7 @@ import "./IERC721Receiver.sol";
 
 contract KittyContract is IERC721, Ownable {
 
-    uint256 public constant CREATION_LIMIT_GEN0 = 10;
+    uint256 public constant CREATION_LIMIT_GEN0 = 24;
     string public constant name = "RadKitty";
     string public constant symbol = "RK";
 

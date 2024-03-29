@@ -4,9 +4,9 @@ var web3 = new Web3(Web3.givenProvider);
 var instance;
 var marketplaceInstance;
 var user;
-var contractAddress = "0xB4dc140dd295E93881351f195BE84219eFb128e9";
+var contractAddress = "0xc06B70f655498dB4b59c4515dbE7417A62569E57";
 
-var contractOwner = "0xBC31E9a846096E929e2Ab75fDEAE850d99Aed464";
+var contractOwner = "0x47b4E7EDC0234C0a41e39ca2afdcA58Dd56DF392";
 
 function start() {
 
@@ -19,6 +19,7 @@ function start() {
     //   contractOwner = test;
     // });
      user = accounts[0]; 
+     
 
 
 

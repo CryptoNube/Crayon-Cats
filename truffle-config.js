@@ -70,6 +70,18 @@ module.exports = {
       gasPrice: 10000000000,
     },
 
+    sepolia: {
+      provider: () => {
+        return new HDWalletProvider(
+          mnemonic,
+          "https://eth-sepolia.g.alchemy.com/v2/QWkZmpSYqkEYZgha3ofCKpVKxkkLmXYt"
+        );
+      },
+      network_id: 11155111,
+      gas: 4465030,
+      gasPrice: 10000000000,
+    },
+
     // ropsten: {
     // provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
     // network_id: 3,       // Ropsten's id

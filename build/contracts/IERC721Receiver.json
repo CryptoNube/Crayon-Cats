@@ -45,7 +45,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity  >=0.4.22 <0.9.0;\r\n\r\ninterface IERC721Receiver {\r\n    function onERC721Received(address operator, address from, uint tokenId, bytes calldata data) external returns (bytes4);\r\n}",
-  "sourcePath": "C:\\Users\\daver\\Documents\\KITTY CLONE\\academy-kitties-template\\contracts\\IERC721Receiver.sol",
+  "sourcePath": "C:\\Users\\daver\\Documents\\crayon-cats-clone\\crayon-cats\\contracts\\IERC721Receiver.sol",
   "ast": {
     "absolutePath": "project:/contracts/IERC721Receiver.sol",
     "exportedSymbols": {
@@ -265,8 +265,8 @@
     "version": "0.8.12+commit.f00d7308.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.4.9",
-  "updatedAt": "2022-12-06T18:15:00.036Z",
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-03-29T00:49:46.019Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
